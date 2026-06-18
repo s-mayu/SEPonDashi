@@ -1,45 +1,36 @@
-# SEPonDashi ドキュメント
+# SEPonDashi
 
-社内向けSEPonDashiの手順・設定ファイル集です。
+Premiere Pro 拡張機能「SE Pon-dashi」のインストーラーです。
 
-## フォルダ構成
+---
 
-| フォルダ / ファイル | 内容 |
-|---|---|
-| `Windows/` | Windows環境向けの手順・設定ファイル |
-| `マック/` | Mac環境向けの手順・設定ファイル |
-| `過去/` | 過去バージョンのファイル |
-| `SEPonDashi_docs.md` | ドキュメント（Markdown形式） |
-| `SEPonDashi_docs.html` | ドキュメント（HTML形式） |
+## インストール手順
 
-## ファイルの取得方法
+### Windows
 
-### 初回（クローン）
+1. このページ右上の緑の **「Code」** ボタン → **「Download ZIP」** をクリック
+2. ZIPを解凍する
+3. `Windows` → `SEPonDashi_Windows` フォルダを開く
+4. `install.bat` を **右クリック →「管理者として実行」**
+5. Premiere Pro を再起動
+6. **ウィンドウ → エクステンション → SE Pon-dashi** で起動確認
 
-**Windows:**
-1. [Git for Windows](https://git-scm.com/download/win) をインストール
-2. 保存したい場所で右クリック →「Git Bash Here」を開き実行：
-```
-git clone https://github.com/s-mayu/SEPonDashi.git
-```
+### Mac
 
-**Mac:**
-1. ターミナルを開いて実行：
-```
-cd ~/Desktop
-git clone https://github.com/s-mayu/SEPonDashi.git
-```
+1. このページ右上の緑の **「Code」** ボタン → **「Download ZIP」** をクリック
+2. ZIPを解凍する
+3. `マック` フォルダを開いて手順に従う
 
-### 最新版に更新
+---
 
-**Windows:** `SEPonDashi` フォルダ内で右クリック →「Git Bash Here」→ `git pull`
+## 更新時
 
-**Mac:** ターミナルで以下を実行：
-```
-cd ~/Desktop/SEPonDashi
-git pull
-```
+同じ手順で `install.bat` を再実行するだけでOKです。  
+登録済みのSEデータは保持されます。
 
-## 閲覧権限について
+---
 
-このリポジトリはプライベートです。アクセスするには管理者への招待申請が必要です。
+## アクセスについて
+
+このリポジトリはプライベートです。  
+閲覧にはGitHubアカウントと管理者からの招待が必要です。

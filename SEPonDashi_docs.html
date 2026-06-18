@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEポン出し（SEPonDashi） — 作成の流れと導入手順</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    nav {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      background: #161b27;
+      border-right: 1px solid #2d3748;
+      padding: 32px 0;
+    }
+    .nav-logo {
+      padding: 0 24px 24px;
+      border-bottom: 1px solid #2d3748;
+      margin-bottom: 16px;
+    }
+    .nav-logo h2 { font-size: 14px; color: #60a5fa; font-weight: 700; letter-spacing: 0.05em; }
+    .nav-logo p  { font-size: 11px; color: #64748b; margin-top: 4px; }
+    nav ul { list-style: none; padding: 0 12px; }
+    nav li { margin: 2px 0; }
+    nav a {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 6px;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.15s, color 0.15s;
+    }
+    nav a:hover { background: #1e293b; color: #e2e8f0; }
+    nav .nav-section {
+      font-size: 11px;
+      font-weight: 700;
+      color: #475569;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 12px 4px;
+    }
+
+    /* ── Main ── */
+    main {
+      padding: 48px 56px;
+      max-width: 900px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #1a2744 100%);
+      border: 1px solid #2d4a7a;
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-bottom: 48px;
+    }
+    .hero h1 { font-size: 26px; font-weight: 800; color: #fff; }
+    .hero p  { color: #93c5fd; margin-top: 8px; font-size: 15px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #1e3a5f;
+      border: 1px solid #3b82f6;
+      color: #60a5fa;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 56px; }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f1f5f9;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #3b82f6;
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #93c5fd;
+      margin: 28px 0 12px;
+    }
+    h3::before { content: "▌ "; color: #3b82f6; }
+    p { color: #cbd5e1; margin-bottom: 12px; }
+
+    /* ── Table ── */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th {
+      background: #1e293b;
+      color: #94a3b8;
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #334155;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #1a2233; }
+
+    /* ── Code ── */
+    pre {
+      background: #0d1117;
+      border: 1px solid #2d3748;
+      border-left: 3px solid #3b82f6;
+      border-radius: 8px;
+      padding: 20px 24px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    code { font-family: "Fira Code", "Cascadia Code", Consolas, monospace; color: #7dd3fc; }
+    pre code { color: #e2e8f0; }
+    .comment { color: #64748b; }
+    .keyword { color: #f472b6; }
+    .string  { color: #86efac; }
+    .xml-tag { color: #60a5fa; }
+    .xml-attr { color: #fbbf24; }
+
+    /* ── Steps ── */
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      background: #3b82f6;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+    .steps li p { margin: 0; }
+
+    /* ── Callout ── */
+    .callout {
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .callout-icon { flex-shrink: 0; font-size: 16px; margin-top: 1px; }
+    .callout.info    { background: #0f2744; border: 1px solid #1e4a8a; color: #93c5fd; }
+    .callout.warning { background: #2a1a00; border: 1px solid #78350f; color: #fbbf24; }
+    .callout.success { background: #052e16; border: 1px solid #14532d; color: #86efac; }
+
+    /* ── OS tabs ── */
+    .os-tabs { display: flex; gap: 8px; margin-bottom: 0; }
+    .os-tab {
+      padding: 8px 20px;
+      border-radius: 6px 6px 0 0;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: default;
+      border: 1px solid #2d3748;
+      border-bottom: none;
+    }
+    .os-tab.win { background: #1a2744; color: #60a5fa; }
+    .os-tab.mac { background: #1a2a1a; color: #86efac; }
+
+    .os-block {
+      border: 1px solid #2d3748;
+      border-radius: 0 8px 8px 8px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .os-block.win { border-color: #2d4a7a; }
+    .os-block.mac { border-color: #1a4a2a; }
+
+    /* ── Diagram ── */
+    .diagram {
+      background: #0d1117;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 16px 0;
+      text-align: center;
+    }
+    .diagram pre { background: none; border: none; padding: 0; margin: 0; text-align: left; display: inline-block; }
+
+    /* ── File tree ── */
+    .filetree {
+      background: #0d1117;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.9;
+      color: #94a3b8;
+    }
+    .filetree .dir  { color: #60a5fa; font-weight: 600; }
+    .filetree .file { color: #cbd5e1; }
+    .filetree .desc { color: #475569; margin-left: 4px; font-family: sans-serif; font-size: 12px; }
+
+    /* ── FAQ ── */
+    details {
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    summary {
+      padding: 14px 18px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #e2e8f0;
+      background: #1e293b;
+      font-size: 14px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    summary::before { content: "Q."; color: #3b82f6; font-weight: 800; }
+    summary::-webkit-details-marker { display: none; }
+    details[open] summary { border-bottom: 1px solid #2d3748; }
+    .faq-answer { padding: 14px 18px; color: #94a3b8; font-size: 14px; }
+    .faq-answer::before { content: "A. "; color: #86efac; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Sidebar -->
+  <nav>
+    <div class="nav-logo">
+      <h2>SEPonDashi</h2>
+      <p>技術ドキュメント</p>
+    </div>
+    <ul>
+      <li class="nav-section">はじめに</li>
+      <li><a href="#overview">概要</a></li>
+      <li><a href="#tech">技術構成</a></li>
+
+      <li class="nav-section">開発</li>
+      <li><a href="#step1">STEP 1 — 設計</a></li>
+      <li><a href="#step2">STEP 2 — manifest.xml</a></li>
+      <li><a href="#step3">STEP 3 — パネル UI</a></li>
+      <li><a href="#step4">STEP 4 — main.js</a></li>
+      <li><a href="#step5">STEP 5 — hostscript.jsx</a></li>
+      <li><a href="#step6">STEP 6 — インストーラー</a></li>
+      <li><a href="#step7">STEP 7 — パッケージング</a></li>
+
+      <li class="nav-section">ファイル</li>
+      <li><a href="#files">ファイル構成</a></li>
+
+      <li class="nav-section">導入手順</li>
+      <li><a href="#install-win">Windows</a></li>
+      <li><a href="#install-mac">macOS</a></li>
+
+      <li class="nav-section">サポート</li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>SEポン出し（SEPonDashi）</h1>
+      <p>Adobe Premiere Pro 用 効果音ポン出しパネル — 作成の流れと導入手順</p>
+      <div class="badges">
+        <span class="badge">CEP 拡張機能</span>
+        <span class="badge">Premiere Pro 2025 / 2026</span>
+        <span class="badge">Windows 対応</span>
+        <span class="badge">macOS 対応</span>
+        <span class="badge">WAV / MP3</span>
+      </div>
+    </div>
+
+    <!-- 概要 -->
+    <section id="overview">
+      <h2>概要</h2>
+      <p>
+        SEポン出しは Adobe Premiere Pro 上で動作する効果音ポン出しパネルです。
+        WAV / MP3 ファイルをあらかじめ登録しておき、ボタンひとつで再生ヘッドの位置にタイムライン配置できます。
+      </p>
+      <table>
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>対応 OS</td><td>Windows 10 / 11、macOS 12 以降</td></tr>
+          <tr><td>対応アプリ</td><td>Adobe Premiere Pro 2025 / 2026（v25.0 以上）</td></tr>
+          <tr><td>種別</td><td>CEP 拡張機能（パネル）</td></tr>
+          <tr><td>対応フォーマット</td><td>WAV / MP3</td></tr>
+          <tr><td>データ保存先（Windows）</td><td>%APPDATA%\SEPonDashi\config.json</td></tr>
+          <tr><td>データ保存先（macOS）</td><td>~/Library/Application Support/SEPonDashi/config.json</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 技術構成 -->
+    <section id="tech">
+      <h2>技術構成</h2>
+
+      <div class="diagram">
+        <pre><code>┌──────────────────────────────────────┐
+│      Premiere Pro（ホストアプリ）      │
+│  ┌────────────────────────────────┐  │
+│  │     CEP パネル（Chromium）      │  │
+│  │   HTML / CSS / JavaScript      │  │
+│  │   Node.js（ファイル操作）       │  │
+│  └───────────┬────────────────────┘  │
+│              │  evalScript()          │
+│  ┌───────────▼────────────────────┐  │
+│  │     ExtendScript エンジン       │  │
+│  │     hostscript.jsx             │  │
+│  │   （タイムライン操作）          │  │
+│  └────────────────────────────────┘  │
+└──────────────────────────────────────┘</code></pre>
+      </div>
+
+      <table>
+        <thead><tr><th>レイヤー</th><th>ファイル</th><th>役割</th></tr></thead>
+        <tbody>
+          <tr><td>パネル UI</td><td><code>index.html</code> / <code>style.css</code></td><td>ボタン・カテゴリ・検索バーの画面</td></tr>
+          <tr><td>パネルロジック</td><td><code>main.js</code></td><td>SE登録・再生・config管理</td></tr>
+          <tr><td>Premiere Pro 連携</td><td><code>hostscript.jsx</code></td><td>タイムラインへのクリップ配置</td></tr>
+          <tr><td>CEP API</td><td><code>lib/CSInterface.js</code></td><td>JS ↔ ExtendScript 橋渡し</td></tr>
+          <tr><td>拡張機能定義</td><td><code>CSXS/manifest.xml</code></td><td>プラグイン情報・対応バージョン</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 作成の流れ -->
+    <section>
+      <h2>作成の流れ</h2>
+
+      <h3 id="step1">STEP 1 — CEP 拡張機能の構造設計</h3>
+      <p>
+        CEP（Common Extensibility Platform）は Adobe CC アプリ上で動作する拡張機能の仕組みです。
+        パネルは Chromium ベースのウェブページとして動作し、Node.js と ExtendScript を通じてアプリ本体を操作します。
+      </p>
+      <pre><code><span class="comment">// CEP拡張機能の構成イメージ</span>
+CEP拡張機能 = ウェブページ（HTML/JS/CSS）
+             + Node.js（ファイル操作）
+             + ExtendScript（Premiere Pro API）</code></pre>
+
+      <h3 id="step2">STEP 2 — manifest.xml の作成</h3>
+      <p>拡張機能の ID、対応バージョン、パネルサイズなどを定義します。</p>
+      <pre><code><span class="xml-tag">&lt;ExtensionManifest</span>
+  <span class="xml-attr">ExtensionBundleId</span>=<span class="string">"com.example.sepondashi"</span>
+  <span class="xml-attr">Version</span>=<span class="string">"12.0"</span><span class="xml-tag">&gt;</span>
+  <span class="xml-tag">&lt;HostList&gt;</span>
+    <span class="comment">&lt;!-- Premiere Pro 2025=25.x, 2026=26.x --&gt;</span>
+    <span class="xml-tag">&lt;Host</span> <span class="xml-attr">Name</span>=<span class="string">"PPRO"</span> <span class="xml-attr">Version</span>=<span class="string">"[25.0,27.0]"</span><span class="xml-tag">/&gt;</span>
+  <span class="xml-tag">&lt;/HostList&gt;</span>
+  <span class="xml-tag">&lt;CEFCommandLine&gt;</span>
+    <span class="xml-tag">&lt;Parameter&gt;</span>--enable-nodejs<span class="xml-tag">&lt;/Parameter&gt;</span>  <span class="comment">&lt;!-- Node.js有効化 --&gt;</span>
+  <span class="xml-tag">&lt;/CEFCommandLine&gt;</span>
+<span class="xml-tag">&lt;/ExtensionManifest&gt;</span></code></pre>
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <span><code>Host Name="PPRO"</code> で Premiere Pro を対象に指定。<code>--enable-nodejs</code> で Node.js を有効化し、ファイルシステムへのアクセスを可能にします。</span>
+      </div>
+
+      <h3 id="step3">STEP 3 — パネル UI の作成（index.html / style.css）</h3>
+      <p>Premiere Pro のダークテーマに合わせた UI を HTML/CSS で構築します。</p>
+      <table>
+        <thead><tr><th>UI 要素</th><th>機能</th></tr></thead>
+        <tbody>
+          <tr><td>トラック選択ボタン（A2〜A5）</td><td>配置先オーディオトラックの選択</td></tr>
+          <tr><td>カテゴリタブ</td><td>SE をグループ分けして管理（追加・削除・名前変更）</td></tr>
+          <tr><td>SE ボタングリッド / リスト</td><td>クリックで配置、右クリックで試聴</td></tr>
+          <tr><td>ドロップゾーン</td><td>ファイルをドラッグ＆ドロップして登録</td></tr>
+          <tr><td>検索バー</td><td>SE 名でリアルタイム絞り込み</td></tr>
+          <tr><td>ログエリア</td><td>操作結果・エラーメッセージを表示</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="step4">STEP 4 — メインロジックの実装（main.js）</h3>
+      <p>CEP パネル内の JavaScript で SE 管理・UI 制御を実装します。</p>
+      <table>
+        <thead><tr><th>機能</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td>config 管理</td><td>SE リスト・カテゴリを config.json に保存。拡張機能フォルダ外に保存するためアップデートで消えない</td></tr>
+          <tr><td>ファイルドロップ</td><td>ドロップされた WAV/MP3 を assets/audio/ にコピーして登録</td></tr>
+          <tr><td>SE 配置</td><td>evalScript() 経由で ExtendScript の placeSEOnTimeline() を呼び出す</td></tr>
+          <tr><td>試聴（右クリック）</td><td>Web Audio API でローカルファイルを再生</td></tr>
+          <tr><td>スキーマ移行</td><td>旧バージョンの config 形式を自動的に v5 形式へ変換</td></tr>
+        </tbody>
+      </table>
+
+      <h3 id="step5">STEP 5 — Premiere Pro 連携（hostscript.jsx）</h3>
+      <p>ExtendScript で Premiere Pro の API を操作してタイムラインにクリップを配置します。</p>
+      <pre><code><span class="keyword">function</span> placeSEOnTimeline(filePath, audioTrackIndex) {
+  <span class="comment">// 1. プロジェクトパネルにファイルをインポート</span>
+  app.project.importFiles([filePath], <span class="keyword">true</span>, ...);
+
+  <span class="comment">// 2. ターゲット以外のトラックをロック（誤配置防止）</span>
+  audioTracks[i].setLocked(i !== audioTrackIndex);
+
+  <span class="comment">// 3. 再生ヘッド位置にクリップを配置（3段フォールバック）</span>
+  seq.overwriteClip(projectItem, ctiTime, ...);  <span class="comment">// 1st</span>
+  seq.insertClip(projectItem, ctiTime, ...);     <span class="comment">// 2nd</span>
+  app.sourceMonitor.overwriteAtTime(ctiTime);    <span class="comment">// 3rd</span>
+}</code></pre>
+
+      <h3 id="step6">STEP 6 — インストーラーの作成</h3>
+      <div class="os-tabs"><div class="os-tab win">Windows</div></div>
+      <div class="os-block win">
+        <p>レジストリに <code>PlayerDebugMode = 1</code> を設定し、署名なし拡張機能を Premiere Pro が読み込めるようにしてから、拡張機能ファイルをコピーします。</p>
+        <pre><code><span class="comment">:: PlayerDebugMode を有効化</span>
+reg add <span class="string">"HKCU\Software\Adobe\CSXS.12"</span> /v PlayerDebugMode /t REG_SZ /d 1 /f
+
+<span class="comment">:: 拡張機能フォルダへコピー（config・audioは保持）</span>
+robocopy <span class="string">"%SRC%\js"</span> <span class="string">"%DEST%\js"</span> /E /IS /IT</code></pre>
+      </div>
+
+      <div class="os-tabs"><div class="os-tab mac">macOS</div></div>
+      <div class="os-block mac">
+        <p><code>defaults write</code> コマンドで PlayerDebugMode を設定し、拡張機能ファイルをコピーします。</p>
+        <pre><code><span class="comment"># PlayerDebugMode を有効化</span>
+defaults write com.adobe.CSXS.12 PlayerDebugMode 1
+
+<span class="comment"># 拡張機能フォルダへコピー（config・audioは保持）</span>
+cp -R <span class="string">"$SRC/js"</span> <span class="string">"$DEST/"</span></code></pre>
+      </div>
+
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <span>アップデート時はコードファイル（js / jsx / css / CSXS / lib / index.html）のみ上書きし、<strong>config.json と音声ファイルは一切触りません。</strong></span>
+      </div>
+
+      <h3 id="step7">STEP 7 — パッケージング・配布</h3>
+      <p>OS 別に別パッケージとして配布します。</p>
+      <table>
+        <thead><tr><th>パッケージ</th><th>対象</th><th>インストーラー</th></tr></thead>
+        <tbody>
+          <tr><td>SEPonDashi_Windows.zip</td><td>Windows ユーザー</td><td>install.bat</td></tr>
+          <tr><td>SEPonDashi_Mac.zip</td><td>macOS ユーザー</td><td>install.command</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warning">
+        <span class="callout-icon">⚠️</span>
+        <span><strong>SEPonDashi_Mac.zip は必ず macOS 上で作成してください。</strong><br>
+        Windows で ZIP を作成すると .command ファイルの実行権限（+x）が失われ、ダブルクリック実行ができなくなります。<br>
+        Mac での作成コマンド: <code>zip -r SEPonDashi_Mac.zip SEPonDashi_Mac/</code></span>
+      </div>
+    </section>
+
+    <!-- ファイル構成 -->
+    <section id="files">
+      <h2>ファイル構成</h2>
+      <div class="filetree">
+        <div><span class="dir">SEPonDashi/</span></div>
+        <div>├── <span class="dir">CSXS/</span></div>
+        <div>│   └── <span class="file">manifest.xml</span>        <span class="desc">拡張機能の定義ファイル</span></div>
+        <div>├── <span class="dir">assets/audio/</span>            <span class="desc">登録した音声ファイルの保存先（初期は空）</span></div>
+        <div>├── <span class="dir">config/</span></div>
+        <div>│   └── <span class="file">config.json</span>         <span class="desc">デフォルト設定（初回インストール時のみ使用）</span></div>
+        <div>├── <span class="dir">css/</span></div>
+        <div>│   └── <span class="file">style.css</span>           <span class="desc">パネルのスタイル</span></div>
+        <div>├── <span class="dir">js/</span></div>
+        <div>│   └── <span class="file">main.js</span>             <span class="desc">パネルのメインロジック</span></div>
+        <div>├── <span class="dir">jsx/</span></div>
+        <div>│   └── <span class="file">hostscript.jsx</span>      <span class="desc">Premiere Pro 操作スクリプト</span></div>
+        <div>├── <span class="dir">lib/</span></div>
+        <div>│   └── <span class="file">CSInterface.js</span>      <span class="desc">CEP 公式 API ライブラリ</span></div>
+        <div>└── <span class="file">index.html</span>              <span class="desc">パネルの HTML</span></div>
+      </div>
+
+      <h3>ユーザーデータの保存先</h3>
+      <table>
+        <thead><tr><th>OS</th><th>パス</th></tr></thead>
+        <tbody>
+          <tr><td>Windows</td><td><code>%APPDATA%\SEPonDashi\config.json</code></td></tr>
+          <tr><td>macOS</td><td><code>~/Library/Application Support/SEPonDashi/config.json</code></td></tr>
+        </tbody>
+      </table>
+      <div class="callout success">
+        <span class="callout-icon">✅</span>
+        <span>ユーザーデータは拡張機能フォルダとは<strong>別の場所</strong>に保存されます。アップデートで拡張機能を上書きしても SE データは消えません。</span>
+      </div>
+    </section>
+
+    <!-- 導入手順 Windows -->
+    <section id="install-win">
+      <h2>導入手順 — Windows</h2>
+
+      <h3>初回インストール</h3>
+      <ol class="steps">
+        <li><p><code>SEPonDashi_Windows.zip</code> を展開する</p></li>
+        <li><p><code>install.bat</code> をダブルクリックする<br>
+          <small style="color:#64748b">「Windows によって PC が保護されました」→「詳細情報」→「実行」</small></p></li>
+        <li><p><code>INSTALLED</code> と表示されたら成功。何かキーを押して閉じる</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+        <li><p>「ウィンドウ」→「エクステンション」→「SEポン出し」でパネルを開く</p></li>
+      </ol>
+
+      <h3>アップデート</h3>
+      <ol class="steps">
+        <li><p>新しい <code>SEPonDashi_Windows.zip</code> を展開する</p></li>
+        <li><p><code>install.bat</code> をダブルクリックする</p></li>
+        <li><p><code>UPDATED - SE data has been preserved.</code> と表示されたら成功</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+      </ol>
+      <div class="callout success">
+        <span class="callout-icon">✅</span>
+        <span>登録済みの SE・カテゴリはすべて保持されます。アンインストール不要です。</span>
+      </div>
+
+      <h3>アンインストール</h3>
+      <ol class="steps">
+        <li><p><code>uninstall.bat</code> をダブルクリックする</p></li>
+        <li><p><code>1 Keep data</code>（推奨）または <code>2 Full delete</code> を選択する</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+      </ol>
+    </section>
+
+    <!-- 導入手順 macOS -->
+    <section id="install-mac">
+      <h2>導入手順 — macOS</h2>
+
+      <h3>初回インストール</h3>
+      <ol class="steps">
+        <li><p><code>SEPonDashi_Mac.zip</code> を展開する</p></li>
+        <li><p><code>install.command</code> を <strong>右クリック → 「開く」</strong> を選択する<br>
+          <small style="color:#64748b">「開発元を確認できない」警告 → 警告ダイアログの「開く」をクリック（初回のみ）</small></p></li>
+        <li><p>ターミナルが開き、<code>INSTALLED</code> と表示されたら成功。Enter で閉じる</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+        <li><p>「ウィンドウ」→「エクステンション」→「SEポン出し」でパネルを開く</p></li>
+      </ol>
+
+      <div class="callout info">
+        <span class="callout-icon">ℹ️</span>
+        <span>初回のセキュリティ確認が完了すると、<strong>2回目以降はダブルクリックで実行</strong>できます。</span>
+      </div>
+
+      <h3>アップデート</h3>
+      <ol class="steps">
+        <li><p>新しい <code>SEPonDashi_Mac.zip</code> を展開する</p></li>
+        <li><p><code>install.command</code> を右クリック → 「開く」</p></li>
+        <li><p><code>UPDATED - SE data has been preserved.</code> と表示されたら成功</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+      </ol>
+      <div class="callout success">
+        <span class="callout-icon">✅</span>
+        <span>登録済みの SE・カテゴリはすべて保持されます。アンインストール不要です。</span>
+      </div>
+
+      <h3>アンインストール</h3>
+      <ol class="steps">
+        <li><p><code>uninstall.command</code> を右クリック → 「開く」</p></li>
+        <li><p><code>1 Keep data</code>（推奨）または <code>2 Full delete</code> を選択する</p></li>
+        <li><p>Premiere Pro を再起動する</p></li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2>よくある質問</h2>
+
+      <details>
+        <summary>パネルが「ウィンドウ → エクステンション」に表示されない</summary>
+        <div class="faq-answer">
+          install.bat（または install.command）を再実行し、Premiere Pro を完全終了してから再起動してください。
+          Premiere Pro のバージョンが 25.0（2025）以上であることも確認してください。
+        </div>
+      </details>
+
+      <details>
+        <summary>効果音をクリックしてもタイムラインに配置されない</summary>
+        <div class="faq-answer">
+          Premiere Pro でシーケンスが開いているか確認してください。
+          また、選択中のトラック（A2〜A5）がそのシーケンスに存在するか確認してください。
+          パネル下部のログエリアにエラーメッセージが表示されている場合は内容を確認してください。
+        </div>
+      </details>
+
+      <details>
+        <summary>アップデートしたら SE が消えた</summary>
+        <div class="faq-answer">
+          別フォルダに展開した ZIP のインストーラーを実行した可能性があります。
+          uninstall（Keep data）でアンインストール後、再インストールし、バックアップの config.json を復元してください。
+        </div>
+      </details>
+
+      <details>
+        <summary>Mac で install.command をダブルクリックするとテキストが開く</summary>
+        <div class="faq-answer">
+          右クリック → 「開く」を選択してください。
+          初回のセキュリティ確認が完了すると、以降はダブルクリックで実行できます。
+          「開く」が表示されない場合は「システム設定」→「プライバシーとセキュリティ」→「このまま開く」を選択してください。
+        </div>
+      </details>
+
+      <details>
+        <summary>Windows で作った ZIP を Mac ユーザーに配布しても大丈夫？</summary>
+        <div class="faq-answer">
+          Windows で作成した ZIP は .command ファイルの実行権限が失われます。
+          Mac ユーザーがダブルクリックしてもテキストエディタが開くだけになります。
+          SEPonDashi_Mac.zip は必ず macOS 上で「zip -r SEPonDashi_Mac.zip SEPonDashi_Mac/」コマンドで作成してください。
+        </div>
+      </details>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

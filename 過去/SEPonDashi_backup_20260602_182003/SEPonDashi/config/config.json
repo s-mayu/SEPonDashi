@@ -1,0 +1,1228 @@
+{
+  "categories": [
+    {
+      "id": "cat_default",
+      "name": "すべて",
+      "seList": [
+        {
+          "id": "se_1779256714835_292",
+          "displayName": "キランッ",
+          "fileName": "キランッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\キランッ.mp3"
+        },
+        {
+          "id": "se_1779339536986_7269",
+          "displayName": "カメラのシャッター3",
+          "fileName": "カメラのシャッター3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\カメラのシャッター3.mp3"
+        },
+        {
+          "id": "se_1779340371734_2329",
+          "displayName": "シーン切り替え2",
+          "fileName": "シーン切り替え2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\シーン切り替え2.mp3"
+        },
+        {
+          "id": "se_1779340435129_5001",
+          "displayName": "ゲージ回復1",
+          "fileName": "ゲージ回復1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ゲージ回復1.mp3"
+        },
+        {
+          "id": "se_1779340435148_7897",
+          "displayName": "ゴゴゴゴ",
+          "fileName": "ゴゴゴゴ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ゴゴゴゴ.mp3"
+        },
+        {
+          "id": "se_1779340435156_2909",
+          "displayName": "ご飯を一気にかき込む",
+          "fileName": "ご飯を一気にかき込む.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ご飯を一気にかき込む.mp3"
+        },
+        {
+          "id": "se_1779340435166_7685",
+          "displayName": "シーン切り替え1",
+          "fileName": "シーン切り替え1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\シーン切り替え1.mp3"
+        },
+        {
+          "id": "se_1779340435177_4664",
+          "displayName": "シャキーン1",
+          "fileName": "シャキーン1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\シャキーン1.mp3"
+        },
+        {
+          "id": "se_1779340435186_3998",
+          "displayName": "シャキーン2",
+          "fileName": "シャキーン2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\シャキーン2.mp3"
+        },
+        {
+          "id": "se_1779340435197_3180",
+          "displayName": "ジャジャーン",
+          "fileName": "ジャジャーン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ジャジャーン.mp3"
+        },
+        {
+          "id": "se_1779340435208_1942",
+          "displayName": "ジャン！",
+          "fileName": "ジャン！.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ジャン！.mp3"
+        },
+        {
+          "id": "se_1779340435219_7128",
+          "displayName": "ちょこっと触る",
+          "fileName": "ちょこっと触る.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ちょこっと触る.mp3"
+        },
+        {
+          "id": "se_1779340435229_8433",
+          "displayName": "ドーン",
+          "fileName": "ドーン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ドーン.mp3"
+        },
+        {
+          "id": "se_1779340435242_1772",
+          "displayName": "ドンドンパフパフ",
+          "fileName": "ドンドンパフパフ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ドンドンパフパフ.mp3"
+        },
+        {
+          "id": "se_1779340435252_4409",
+          "displayName": "ニュッ1",
+          "fileName": "ニュッ1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ニュッ1.mp3"
+        },
+        {
+          "id": "se_1779340435262_3178",
+          "displayName": "ニュッ3",
+          "fileName": "ニュッ3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ニュッ3.mp3"
+        },
+        {
+          "id": "se_1779340435272_5348",
+          "displayName": "バーン",
+          "fileName": "バーン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\バーン.mp3"
+        },
+        {
+          "id": "se_1779340435282_6344",
+          "displayName": "パッ",
+          "fileName": "パッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\パッ.mp3"
+        },
+        {
+          "id": "se_1779340435294_9407",
+          "displayName": "パパッ",
+          "fileName": "パパッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\パパッ.mp3"
+        },
+        {
+          "id": "se_1779340435304_6087",
+          "displayName": "パフ",
+          "fileName": "パフ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\パフ.mp3"
+        },
+        {
+          "id": "se_1779340435314_4099",
+          "displayName": "ヒーローの決めポーズ",
+          "fileName": "ヒーローの決めポーズ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ヒーローの決めポーズ.mp3"
+        },
+        {
+          "id": "se_1779340435324_750",
+          "displayName": "ヒューンと落下",
+          "fileName": "ヒューンと落下.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ヒューンと落下.mp3"
+        },
+        {
+          "id": "se_1779340435335_5332",
+          "displayName": "ひらめく1",
+          "fileName": "ひらめく1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ひらめく1.mp3"
+        },
+        {
+          "id": "se_1779340435342_839",
+          "displayName": "ひらめく2",
+          "fileName": "ひらめく2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ひらめく2.mp3"
+        },
+        {
+          "id": "se_1779340435354_8877",
+          "displayName": "ぷよん",
+          "fileName": "ぷよん.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ぷよん.mp3"
+        },
+        {
+          "id": "se_1779340435366_3616",
+          "displayName": "ペタッ",
+          "fileName": "ペタッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ペタッ.mp3"
+        },
+        {
+          "id": "se_1779340435377_4321",
+          "displayName": "ボヨヨーン",
+          "fileName": "ボヨヨーン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ボヨヨーン.mp3"
+        },
+        {
+          "id": "se_1779340435387_9552",
+          "displayName": "ボヨン",
+          "fileName": "ボヨン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ボヨン.mp3"
+        },
+        {
+          "id": "se_1779340435397_3929",
+          "displayName": "ラッパのファンファーレ",
+          "fileName": "ラッパのファンファーレ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ラッパのファンファーレ.mp3"
+        },
+        {
+          "id": "se_1779340435406_9898",
+          "displayName": "レベルアップ",
+          "fileName": "レベルアップ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\レベルアップ.mp3"
+        },
+        {
+          "id": "se_1779340435417_5370",
+          "displayName": "間抜け1",
+          "fileName": "間抜け1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\間抜け1.mp3"
+        },
+        {
+          "id": "se_1779340435426_1312",
+          "displayName": "間抜け3",
+          "fileName": "間抜け3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\間抜け3.mp3"
+        },
+        {
+          "id": "se_1779340435439_6681",
+          "displayName": "間抜け4",
+          "fileName": "間抜け4.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\間抜け4.mp3"
+        },
+        {
+          "id": "se_1779340435450_8930",
+          "displayName": "金額表示",
+          "fileName": "金額表示.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\金額表示.mp3"
+        },
+        {
+          "id": "se_1779340435473_3676",
+          "displayName": "心臓の鼓動1",
+          "fileName": "心臓の鼓動1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\心臓の鼓動1.mp3"
+        },
+        {
+          "id": "se_1779340435482_1028",
+          "displayName": "爆発1",
+          "fileName": "爆発1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\爆発1.mp3"
+        },
+        {
+          "id": "se_1779340659381_4848",
+          "displayName": "Motion-Swish04-4(Single)",
+          "fileName": "Motion-Swish04-4(Single).mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\Motion-Swish04-4(Single).mp3"
+        },
+        {
+          "id": "se_1780373188353_4950",
+          "displayName": "スポットライト",
+          "fileName": "スポットライト.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\スポットライト.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779167366557_7348",
+      "name": "kirakira",
+      "seList": [
+        {
+          "id": "se_1779167403618_4324",
+          "displayName": "きらーん1",
+          "fileName": "きらーん1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\きらーん1.mp3"
+        },
+        {
+          "id": "se_1779167403618_6444",
+          "displayName": "きらーん2",
+          "fileName": "きらーん2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\きらーん2.mp3"
+        },
+        {
+          "id": "se_1779167403618_4768",
+          "displayName": "きらきら輝く1",
+          "fileName": "きらきら輝く1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\きらきら輝く1.mp3"
+        },
+        {
+          "id": "se_1779167403619_1959",
+          "displayName": "きらきら輝く3",
+          "fileName": "きらきら輝く3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\きらきら輝く3.mp3"
+        },
+        {
+          "id": "se_1779167403619_6314",
+          "displayName": "きらきら輝く6",
+          "fileName": "きらきら輝く6.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\きらきら輝く6.mp3"
+        },
+        {
+          "id": "se_1779167403619_2544",
+          "displayName": "キラッ1",
+          "fileName": "キラッ1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\キラッ1.mp3"
+        },
+        {
+          "id": "se_1779167403619_3361",
+          "displayName": "キランッ",
+          "fileName": "キランッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\キランッ.mp3"
+        },
+        {
+          "id": "se_1779167403617_4087",
+          "displayName": "nc160462_アクセント効果音、キラン",
+          "fileName": "nc160462_アクセント効果音、キラン.wav",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\nc160462_アクセント効果音、キラン.wav"
+        },
+        {
+          "id": "se_1779167403618_5259",
+          "displayName": "キラーン_閃き",
+          "fileName": "キラーン_閃き.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\キラーン_閃き.mp3"
+        },
+        {
+          "id": "se_1779425447752_7343",
+          "displayName": "過去を思い出す",
+          "fileName": "過去を思い出す.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\過去を思い出す.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779183824070_4810",
+      "name": "abroad_SE",
+      "seList": [
+        {
+          "id": "se_1779183835066_8267",
+          "displayName": "thud-sound-effect-405470",
+          "fileName": "thud-sound-effect-405470.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\thud-sound-effect-405470.mp3"
+        },
+        {
+          "id": "se_1779183835067_8403",
+          "displayName": "video-game-bonus-323603",
+          "fileName": "video-game-bonus-323603.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\video-game-bonus-323603.mp3"
+        },
+        {
+          "id": "se_1779183835067_1512",
+          "displayName": "vinyl-stop-sound-effect-241388",
+          "fileName": "vinyl-stop-sound-effect-241388.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\vinyl-stop-sound-effect-241388.mp3"
+        },
+        {
+          "id": "se_1779183835068_8238",
+          "displayName": "whip-05-323597",
+          "fileName": "whip-05-323597.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\whip-05-323597.mp3"
+        },
+        {
+          "id": "se_1779183835068_3335",
+          "displayName": "whistle-slide-down-323778",
+          "fileName": "whistle-slide-down-323778.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\whistle-slide-down-323778.mp3"
+        },
+        {
+          "id": "se_1779183835071_2354",
+          "displayName": "whoosh-bamboo-389752",
+          "fileName": "whoosh-bamboo-389752.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\whoosh-bamboo-389752.mp3"
+        },
+        {
+          "id": "se_1779183835072_9624",
+          "displayName": "whoosh-cinematic-376875",
+          "fileName": "whoosh-cinematic-376875.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\whoosh-cinematic-376875.mp3"
+        },
+        {
+          "id": "se_1779183835073_9260",
+          "displayName": "whoosh-end-384629",
+          "fileName": "whoosh-end-384629.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\whoosh-end-384629.mp3"
+        },
+        {
+          "id": "se_1779183835074_7863",
+          "displayName": "04 Whoosh",
+          "fileName": "04 Whoosh.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\04 Whoosh.mp3"
+        },
+        {
+          "id": "se_1779183835075_4651",
+          "displayName": "advertising-logo-199582",
+          "fileName": "advertising-logo-199582.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\advertising-logo-199582.mp3"
+        },
+        {
+          "id": "se_1779183835076_2389",
+          "displayName": "alerte-346112",
+          "fileName": "alerte-346112.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\alerte-346112.mp3"
+        },
+        {
+          "id": "se_1779183835076_2090",
+          "displayName": "bell-notification-337658",
+          "fileName": "bell-notification-337658.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\bell-notification-337658.mp3"
+        },
+        {
+          "id": "se_1779183835077_2912",
+          "displayName": "bell-ring-390294",
+          "fileName": "bell-ring-390294.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\bell-ring-390294.mp3"
+        },
+        {
+          "id": "se_1779183835078_7907",
+          "displayName": "boing-flexatone-wobble-310482",
+          "fileName": "boing-flexatone-wobble-310482.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\boing-flexatone-wobble-310482.mp3"
+        },
+        {
+          "id": "se_1779183835080_5173",
+          "displayName": "boom-geomorphism-cinematic-trailer-sound-effects-123876",
+          "fileName": "boom-geomorphism-cinematic-trailer-sound-effects-123876.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\boom-geomorphism-cinematic-trailer-sound-effects-123876.mp3"
+        },
+        {
+          "id": "se_1779183835081_2110",
+          "displayName": "bright-notification-352449",
+          "fileName": "bright-notification-352449.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\bright-notification-352449.mp3"
+        },
+        {
+          "id": "se_1779183835082_1525",
+          "displayName": "broken-bottle-191998",
+          "fileName": "broken-bottle-191998.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\broken-bottle-191998.mp3"
+        },
+        {
+          "id": "se_1779183835083_234",
+          "displayName": "bubble-pop-406640",
+          "fileName": "bubble-pop-406640.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\bubble-pop-406640.mp3"
+        },
+        {
+          "id": "se_1779183835083_7967",
+          "displayName": "camera-flash-204151",
+          "fileName": "camera-flash-204151.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\camera-flash-204151.mp3"
+        },
+        {
+          "id": "se_1779183835084_5470",
+          "displayName": "cartoon_wink_magic_sparkle-6896",
+          "fileName": "cartoon_wink_magic_sparkle-6896.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\cartoon_wink_magic_sparkle-6896.mp3"
+        },
+        {
+          "id": "se_1779183835084_9776",
+          "displayName": "cartoon-blinking-372481",
+          "fileName": "cartoon-blinking-372481.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\cartoon-blinking-372481.mp3"
+        },
+        {
+          "id": "se_1779183835085_3470",
+          "displayName": "cartoon-jump-6462",
+          "fileName": "cartoon-jump-6462.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\cartoon-jump-6462.mp3"
+        },
+        {
+          "id": "se_1779183835085_9140",
+          "displayName": "cash-register-kaching-sound-effect-125042",
+          "fileName": "cash-register-kaching-sound-effect-125042.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\cash-register-kaching-sound-effect-125042.mp3"
+        },
+        {
+          "id": "se_1779183835086_2949",
+          "displayName": "correct-6033",
+          "fileName": "correct-6033.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\correct-6033.mp3"
+        },
+        {
+          "id": "se_1779183835091_6470",
+          "displayName": "creepy-carousel-187265",
+          "fileName": "creepy-carousel-187265.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\creepy-carousel-187265.mp3"
+        },
+        {
+          "id": "se_1779183835092_984",
+          "displayName": "digital-beeping-151921",
+          "fileName": "digital-beeping-151921.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\digital-beeping-151921.mp3"
+        },
+        {
+          "id": "se_1779183835092_3954",
+          "displayName": "ding-101492",
+          "fileName": "ding-101492.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ding-101492.mp3"
+        },
+        {
+          "id": "se_1779183835093_9856",
+          "displayName": "ding-402325",
+          "fileName": "ding-402325.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ding-402325.mp3"
+        },
+        {
+          "id": "se_1779183835094_7424",
+          "displayName": "ding-cartoon-346093",
+          "fileName": "ding-cartoon-346093.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ding-cartoon-346093.mp3"
+        },
+        {
+          "id": "se_1779183835095_7189",
+          "displayName": "ding-idea-40142",
+          "fileName": "ding-idea-40142.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ding-idea-40142.mp3"
+        },
+        {
+          "id": "se_1779183835095_7207",
+          "displayName": "drop-coin-384921",
+          "fileName": "drop-coin-384921.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\drop-coin-384921.mp3"
+        },
+        {
+          "id": "se_1779183835096_2710",
+          "displayName": "elegant-piano-logo-153281",
+          "fileName": "elegant-piano-logo-153281.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\elegant-piano-logo-153281.mp3"
+        },
+        {
+          "id": "se_1779183835096_9610",
+          "displayName": "error-04-199275",
+          "fileName": "error-04-199275.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\error-04-199275.mp3"
+        },
+        {
+          "id": "se_1779183835097_5170",
+          "displayName": "error-05-199276",
+          "fileName": "error-05-199276.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\error-05-199276.mp3"
+        },
+        {
+          "id": "se_1779183835098_9480",
+          "displayName": "error-08-206492",
+          "fileName": "error-08-206492.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\error-08-206492.mp3"
+        },
+        {
+          "id": "se_1779183835098_1406",
+          "displayName": "error-09-206494",
+          "fileName": "error-09-206494.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\error-09-206494.mp3"
+        },
+        {
+          "id": "se_1779183835099_5268",
+          "displayName": "error-010-206498",
+          "fileName": "error-010-206498.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\error-010-206498.mp3"
+        },
+        {
+          "id": "se_1779183835099_2518",
+          "displayName": "f1_radio_sound-293747",
+          "fileName": "f1_radio_sound-293747.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\f1_radio_sound-293747.mp3"
+        },
+        {
+          "id": "se_1779183835100_8757",
+          "displayName": "fail-trumpet-242645",
+          "fileName": "fail-trumpet-242645.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\fail-trumpet-242645.mp3"
+        },
+        {
+          "id": "se_1779183835101_9075",
+          "displayName": "fart-4-228244",
+          "fileName": "fart-4-228244.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\fart-4-228244.mp3"
+        },
+        {
+          "id": "se_1779183835101_9243",
+          "displayName": "fast-whoosh-118248",
+          "fileName": "fast-whoosh-118248.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\fast-whoosh-118248.mp3"
+        },
+        {
+          "id": "se_1779183835102_4583",
+          "displayName": "funny-pipe-effect-229173",
+          "fileName": "funny-pipe-effect-229173.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\funny-pipe-effect-229173.mp3"
+        },
+        {
+          "id": "se_1779183835103_8445",
+          "displayName": "game-start-317318",
+          "fileName": "game-start-317318.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\game-start-317318.mp3"
+        },
+        {
+          "id": "se_1779183835104_9133",
+          "displayName": "goofy-ahh-car-horn-200870",
+          "fileName": "goofy-ahh-car-horn-200870.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\goofy-ahh-car-horn-200870.mp3"
+        },
+        {
+          "id": "se_1779183835104_7359",
+          "displayName": "happy-message-ping-351298",
+          "fileName": "happy-message-ping-351298.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\happy-message-ping-351298.mp3"
+        },
+        {
+          "id": "se_1779183835107_3885",
+          "displayName": "heartbeat-sound-372448",
+          "fileName": "heartbeat-sound-372448.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\heartbeat-sound-372448.mp3"
+        },
+        {
+          "id": "se_1779183835111_1280",
+          "displayName": "horror-piano-443326",
+          "fileName": "horror-piano-443326.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\horror-piano-443326.mp3"
+        },
+        {
+          "id": "se_1779183835112_8602",
+          "displayName": "hospital-monitor-151929",
+          "fileName": "hospital-monitor-151929.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\hospital-monitor-151929.mp3"
+        },
+        {
+          "id": "se_1779183835113_8433",
+          "displayName": "impact-6291",
+          "fileName": "impact-6291.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\impact-6291.mp3"
+        },
+        {
+          "id": "se_1779183835113_8002",
+          "displayName": "impact-cinematic-boom-05-352465",
+          "fileName": "impact-cinematic-boom-05-352465.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\impact-cinematic-boom-05-352465.mp3"
+        },
+        {
+          "id": "se_1779183835114_4598",
+          "displayName": "interface-03-277552",
+          "fileName": "interface-03-277552.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\interface-03-277552.mp3"
+        },
+        {
+          "id": "se_1779183835115_7230",
+          "displayName": "joke-drums-02-259684",
+          "fileName": "joke-drums-02-259684.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\joke-drums-02-259684.mp3"
+        },
+        {
+          "id": "se_1779183835115_540",
+          "displayName": "joke-drums-242242",
+          "fileName": "joke-drums-242242.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\joke-drums-242242.mp3"
+        },
+        {
+          "id": "se_1779183835116_7157",
+          "displayName": "level-up-02-199574",
+          "fileName": "level-up-02-199574.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\level-up-02-199574.mp3"
+        },
+        {
+          "id": "se_1779183835117_2868",
+          "displayName": "level-up-03-199576",
+          "fileName": "level-up-03-199576.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\level-up-03-199576.mp3"
+        },
+        {
+          "id": "se_1779183835118_5780",
+          "displayName": "level-up-05-326133",
+          "fileName": "level-up-05-326133.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\level-up-05-326133.mp3"
+        },
+        {
+          "id": "se_1779183835119_9605",
+          "displayName": "level-up-191997",
+          "fileName": "level-up-191997.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\level-up-191997.mp3"
+        },
+        {
+          "id": "se_1779183835119_189",
+          "displayName": "logo-corporate-152477",
+          "fileName": "logo-corporate-152477.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\logo-corporate-152477.mp3"
+        },
+        {
+          "id": "se_1779183835120_8962",
+          "displayName": "logo-corporate-piano-152476",
+          "fileName": "logo-corporate-piano-152476.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\logo-corporate-piano-152476.mp3"
+        },
+        {
+          "id": "se_1779183835122_1995",
+          "displayName": "magic-03-278824",
+          "fileName": "magic-03-278824.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\magic-03-278824.mp3"
+        },
+        {
+          "id": "se_1779183835127_3810",
+          "displayName": "melodies-of-fear-187266",
+          "fileName": "melodies-of-fear-187266.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\melodies-of-fear-187266.mp3"
+        },
+        {
+          "id": "se_1779183835128_5942",
+          "displayName": "message-incoming-02-199577",
+          "fileName": "message-incoming-02-199577.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\message-incoming-02-199577.mp3"
+        },
+        {
+          "id": "se_1779183835129_833",
+          "displayName": "mid-nights-sound-291477",
+          "fileName": "mid-nights-sound-291477.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\mid-nights-sound-291477.mp3"
+        },
+        {
+          "id": "se_1779183835130_2104",
+          "displayName": "mouse-click-290204",
+          "fileName": "mouse-click-290204.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\mouse-click-290204.mp3"
+        },
+        {
+          "id": "se_1779183835131_5711",
+          "displayName": "new-notification-02-323592",
+          "fileName": "new-notification-02-323592.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-02-323592.mp3"
+        },
+        {
+          "id": "se_1779183835131_1575",
+          "displayName": "new-notification-3-398649",
+          "fileName": "new-notification-3-398649.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-3-398649.mp3"
+        },
+        {
+          "id": "se_1779183835132_1332",
+          "displayName": "new-notification-04-326127",
+          "fileName": "new-notification-04-326127.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-04-326127.mp3"
+        },
+        {
+          "id": "se_1779183835133_8792",
+          "displayName": "new-notification-05-352453",
+          "fileName": "new-notification-05-352453.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-05-352453.mp3"
+        },
+        {
+          "id": "se_1779183835134_7566",
+          "displayName": "new-notification-07-210334",
+          "fileName": "new-notification-07-210334.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-07-210334.mp3"
+        },
+        {
+          "id": "se_1779183835134_8582",
+          "displayName": "new-notification-08-352461",
+          "fileName": "new-notification-08-352461.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-08-352461.mp3"
+        },
+        {
+          "id": "se_1779183835135_3711",
+          "displayName": "new-notification-09-352705",
+          "fileName": "new-notification-09-352705.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-09-352705.mp3"
+        },
+        {
+          "id": "se_1779183835136_9625",
+          "displayName": "new-notification-010-352755",
+          "fileName": "new-notification-010-352755.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-010-352755.mp3"
+        },
+        {
+          "id": "se_1779183835137_2597",
+          "displayName": "new-notification-011-364050",
+          "fileName": "new-notification-011-364050.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-011-364050.mp3"
+        },
+        {
+          "id": "se_1779183835137_5197",
+          "displayName": "new-notification-012-363675",
+          "fileName": "new-notification-012-363675.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-012-363675.mp3"
+        },
+        {
+          "id": "se_1779183835138_8799",
+          "displayName": "new-notification-013-363676",
+          "fileName": "new-notification-013-363676.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-013-363676.mp3"
+        },
+        {
+          "id": "se_1779183835139_2015",
+          "displayName": "new-notification-014-363678",
+          "fileName": "new-notification-014-363678.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-014-363678.mp3"
+        },
+        {
+          "id": "se_1779183835140_5228",
+          "displayName": "new-notification-016-350210",
+          "fileName": "new-notification-016-350210.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-016-350210.mp3"
+        },
+        {
+          "id": "se_1779183835140_5098",
+          "displayName": "new-notification-018-363746",
+          "fileName": "new-notification-018-363746.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-018-363746.mp3"
+        },
+        {
+          "id": "se_1779183835141_7120",
+          "displayName": "new-notification-019-363747",
+          "fileName": "new-notification-019-363747.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-019-363747.mp3"
+        },
+        {
+          "id": "se_1779183835142_8315",
+          "displayName": "new-notification-021-370045",
+          "fileName": "new-notification-021-370045.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-021-370045.mp3"
+        },
+        {
+          "id": "se_1779183835142_3647",
+          "displayName": "new-notification-022-370046",
+          "fileName": "new-notification-022-370046.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-022-370046.mp3"
+        },
+        {
+          "id": "se_1779183835143_14",
+          "displayName": "new-notification-024-370048",
+          "fileName": "new-notification-024-370048.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-024-370048.mp3"
+        },
+        {
+          "id": "se_1779183835144_5146",
+          "displayName": "new-notification-025-380251",
+          "fileName": "new-notification-025-380251.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-025-380251.mp3"
+        },
+        {
+          "id": "se_1779183835144_4436",
+          "displayName": "new-notification-026-380249",
+          "fileName": "new-notification-026-380249.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-026-380249.mp3"
+        },
+        {
+          "id": "se_1779183835145_9279",
+          "displayName": "new-notification-027-383749",
+          "fileName": "new-notification-027-383749.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-027-383749.mp3"
+        },
+        {
+          "id": "se_1779183835146_1143",
+          "displayName": "new-notification-028-383966",
+          "fileName": "new-notification-028-383966.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-notification-028-383966.mp3"
+        },
+        {
+          "id": "se_1779183835146_3049",
+          "displayName": "new-positive-notice-161930",
+          "fileName": "new-positive-notice-161930.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\new-positive-notice-161930.mp3"
+        },
+        {
+          "id": "se_1779183835147_7923",
+          "displayName": "notification-beep-229154",
+          "fileName": "notification-beep-229154.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\notification-beep-229154.mp3"
+        },
+        {
+          "id": "se_1779183835148_9570",
+          "displayName": "notification-sound-effect-372475",
+          "fileName": "notification-sound-effect-372475.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\notification-sound-effect-372475.mp3"
+        },
+        {
+          "id": "se_1779183835151_9289",
+          "displayName": "phone-ringtone-normal-444775",
+          "fileName": "phone-ringtone-normal-444775.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\phone-ringtone-normal-444775.mp3"
+        },
+        {
+          "id": "se_1779183835154_3147",
+          "displayName": "police-siren-sound-effect-240674",
+          "fileName": "police-siren-sound-effect-240674.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\police-siren-sound-effect-240674.mp3"
+        },
+        {
+          "id": "se_1779183835155_5021",
+          "displayName": "ringtone-015-151931",
+          "fileName": "ringtone-015-151931.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ringtone-015-151931.mp3"
+        },
+        {
+          "id": "se_1779183835157_5464",
+          "displayName": "ringtone-030-437513",
+          "fileName": "ringtone-030-437513.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ringtone-030-437513.mp3"
+        },
+        {
+          "id": "se_1779183835167_2328",
+          "displayName": "riser-hole-391174",
+          "fileName": "riser-hole-391174.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\riser-hole-391174.mp3"
+        },
+        {
+          "id": "se_1779183835171_3788",
+          "displayName": "riser-somewhere-391176",
+          "fileName": "riser-somewhere-391176.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\riser-somewhere-391176.mp3"
+        },
+        {
+          "id": "se_1779183835172_4918",
+          "displayName": "shine-1-268902",
+          "fileName": "shine-1-268902.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\shine-1-268902.mp3"
+        },
+        {
+          "id": "se_1779183835173_6299",
+          "displayName": "shine-11-268907",
+          "fileName": "shine-11-268907.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\shine-11-268907.mp3"
+        },
+        {
+          "id": "se_1779183835174_1831",
+          "displayName": "short-digital-notification-alert-440353",
+          "fileName": "short-digital-notification-alert-440353.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\short-digital-notification-alert-440353.mp3"
+        },
+        {
+          "id": "se_1779183835175_2718",
+          "displayName": "simple-short-call-153308",
+          "fileName": "simple-short-call-153308.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\simple-short-call-153308.mp3"
+        },
+        {
+          "id": "se_1779183835176_3993",
+          "displayName": "simple-whoosh-382724",
+          "fileName": "simple-whoosh-382724.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\simple-whoosh-382724.mp3"
+        },
+        {
+          "id": "se_1779183835176_3091",
+          "displayName": "slide-whistle-up-326154",
+          "fileName": "slide-whistle-up-326154.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\slide-whistle-up-326154.mp3"
+        },
+        {
+          "id": "se_1779183835177_9845",
+          "displayName": "slow-whoosh-118247",
+          "fileName": "slow-whoosh-118247.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\slow-whoosh-118247.mp3"
+        },
+        {
+          "id": "se_1779183835181_2379",
+          "displayName": "soft-piano-100-bpm-121529",
+          "fileName": "soft-piano-100-bpm-121529.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\soft-piano-100-bpm-121529.mp3"
+        },
+        {
+          "id": "se_1779183835182_6903",
+          "displayName": "soft-transition-338894",
+          "fileName": "soft-transition-338894.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\soft-transition-338894.mp3"
+        },
+        {
+          "id": "se_1779183835184_560",
+          "displayName": "sound-effect-twinklesparkle-115095",
+          "fileName": "sound-effect-twinklesparkle-115095.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\sound-effect-twinklesparkle-115095.mp3"
+        },
+        {
+          "id": "se_1779183835184_5864",
+          "displayName": "sparkle-355937",
+          "fileName": "sparkle-355937.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\sparkle-355937.mp3"
+        },
+        {
+          "id": "se_1779183835185_5723",
+          "displayName": "spring-vibration-229137",
+          "fileName": "spring-vibration-229137.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\spring-vibration-229137.mp3"
+        },
+        {
+          "id": "se_1779183835186_1262",
+          "displayName": "suddenly-and-without-warning-153296",
+          "fileName": "suddenly-and-without-warning-153296.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\suddenly-and-without-warning-153296.mp3"
+        },
+        {
+          "id": "se_1779183835186_3107",
+          "displayName": "sus-meme-sound-181271",
+          "fileName": "sus-meme-sound-181271.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\sus-meme-sound-181271.mp3"
+        },
+        {
+          "id": "se_1779183835187_1424",
+          "displayName": "swoosh-4-359828",
+          "fileName": "swoosh-4-359828.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\swoosh-4-359828.mp3"
+        },
+        {
+          "id": "se_1779183835187_1012",
+          "displayName": "swoosh-06-351021",
+          "fileName": "swoosh-06-351021.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\swoosh-06-351021.mp3"
+        },
+        {
+          "id": "se_1779183835188_3042",
+          "displayName": "swoosh-015-383769",
+          "fileName": "swoosh-015-383769.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\swoosh-015-383769.mp3"
+        },
+        {
+          "id": "se_1779183835189_9168",
+          "displayName": "system-notification-02-352442",
+          "fileName": "system-notification-02-352442.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\system-notification-02-352442.mp3"
+        },
+        {
+          "id": "se_1779183835190_2886",
+          "displayName": "system-notification-04-206493",
+          "fileName": "system-notification-04-206493.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\system-notification-04-206493.mp3"
+        },
+        {
+          "id": "se_1779183835190_2939",
+          "displayName": "system-notification-199277",
+          "fileName": "system-notification-199277.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\system-notification-199277.mp3"
+        },
+        {
+          "id": "se_1779256714835_4463",
+          "displayName": "キラッ1",
+          "fileName": "キラッ1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\キラッ1.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779183846037_6448",
+      "name": "botan",
+      "seList": [
+        {
+          "id": "se_1779183849995_990",
+          "displayName": "決定ボタンを押す1",
+          "fileName": "決定ボタンを押す1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す1.mp3"
+        },
+        {
+          "id": "se_1779183849996_6901",
+          "displayName": "決定ボタンを押す3",
+          "fileName": "決定ボタンを押す3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す3.mp3"
+        },
+        {
+          "id": "se_1779183849997_3074",
+          "displayName": "決定ボタンを押す4",
+          "fileName": "決定ボタンを押す4.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す4.mp3"
+        },
+        {
+          "id": "se_1779183849997_3200",
+          "displayName": "決定ボタンを押す13",
+          "fileName": "決定ボタンを押す13.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す13.mp3"
+        },
+        {
+          "id": "se_1779183849998_5381",
+          "displayName": "決定ボタンを押す22",
+          "fileName": "決定ボタンを押す22.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す22.mp3"
+        },
+        {
+          "id": "se_1779183849999_9701",
+          "displayName": "決定ボタンを押す28",
+          "fileName": "決定ボタンを押す28.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す28.mp3"
+        },
+        {
+          "id": "se_1779183849999_3250",
+          "displayName": "決定ボタンを押す29",
+          "fileName": "決定ボタンを押す29.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す29.mp3"
+        },
+        {
+          "id": "se_1779183850000_2826",
+          "displayName": "決定ボタンを押す33",
+          "fileName": "決定ボタンを押す33.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す33.mp3"
+        },
+        {
+          "id": "se_1779183850001_829",
+          "displayName": "決定ボタンを押す34",
+          "fileName": "決定ボタンを押す34.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す34.mp3"
+        },
+        {
+          "id": "se_1779183850002_7730",
+          "displayName": "決定ボタンを押す35",
+          "fileName": "決定ボタンを押す35.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す35.mp3"
+        },
+        {
+          "id": "se_1779183850003_5845",
+          "displayName": "決定ボタンを押す41",
+          "fileName": "決定ボタンを押す41.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す41.mp3"
+        },
+        {
+          "id": "se_1779183850003_2787",
+          "displayName": "決定ボタンを押す46",
+          "fileName": "決定ボタンを押す46.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\決定ボタンを押す46.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779183890790_8786",
+      "name": "よく使う",
+      "seList": [
+        {
+          "id": "se_1779183897952_962",
+          "displayName": "和太鼓でカカッ",
+          "fileName": "和太鼓でカカッ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\和太鼓でカカッ.mp3"
+        },
+        {
+          "id": "se_1779183897953_6754",
+          "displayName": "和太鼓でドドン",
+          "fileName": "和太鼓でドドン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\和太鼓でドドン.mp3"
+        },
+        {
+          "id": "se_1779183897953_481",
+          "displayName": "和太鼓でドン",
+          "fileName": "和太鼓でドン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\和太鼓でドン.mp3"
+        },
+        {
+          "id": "se_1779183901790_4182",
+          "displayName": "小鼓（こつづみ）",
+          "fileName": "小鼓（こつづみ）.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\小鼓（こつづみ）.mp3"
+        },
+        {
+          "id": "se_1779183901791_5749",
+          "displayName": "拍子木1",
+          "fileName": "拍子木1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\拍子木1.mp3"
+        },
+        {
+          "id": "se_1779183901792_1575",
+          "displayName": "拍子木2",
+          "fileName": "拍子木2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\拍子木2.mp3"
+        },
+        {
+          "id": "se_1779340772245_8638",
+          "displayName": "ヒーローの決めポーズ",
+          "fileName": "ヒーローの決めポーズ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ヒーローの決めポーズ.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779184683640_6046",
+      "name": "ツッコミ",
+      "seList": [
+        {
+          "id": "se_1779184697265_1641",
+          "displayName": "ビシッとツッコミ1",
+          "fileName": "ビシッとツッコミ1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ビシッとツッコミ1.mp3"
+        },
+        {
+          "id": "se_1779184697266_623",
+          "displayName": "ビシッとツッコミ2",
+          "fileName": "ビシッとツッコミ2.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ビシッとツッコミ2.mp3"
+        },
+        {
+          "id": "se_1779184697266_3990",
+          "displayName": "ポカンとげんこつ",
+          "fileName": "ポカンとげんこつ.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ポカンとげんこつ.mp3"
+        }
+      ]
+    },
+    {
+      "id": "cat_1779248996528_760",
+      "name": "negative",
+      "seList": [
+        {
+          "id": "se_1779249007610_8372",
+          "displayName": "ショック3",
+          "fileName": "ショック3.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ショック3.mp3"
+        },
+        {
+          "id": "se_1779249007610_4280",
+          "displayName": "チーン1",
+          "fileName": "チーン1.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\チーン1.mp3"
+        },
+        {
+          "id": "se_1779249007610_7894",
+          "displayName": "チリン",
+          "fileName": "チリン.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\チリン.mp3"
+        },
+        {
+          "id": "se_1779249007611_5135",
+          "displayName": "でかい雫",
+          "fileName": "でかい雫.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\でかい雫.mp3"
+        },
+        {
+          "id": "se_1779249007611_9813",
+          "displayName": "ピアノの単音",
+          "fileName": "ピアノの単音.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\ピアノの単音.mp3"
+        },
+        {
+          "id": "se_1779249007611_9680",
+          "displayName": "呪いの旋律",
+          "fileName": "呪いの旋律.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\呪いの旋律.mp3"
+        },
+        {
+          "id": "se_1779249007612_7531",
+          "displayName": "荘厳な雰囲気",
+          "fileName": "荘厳な雰囲気.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\荘厳な雰囲気.mp3"
+        },
+        {
+          "id": "se_1779249007612_812",
+          "displayName": "不安（ピアノ演奏）",
+          "fileName": "不安（ピアノ演奏）.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\不安（ピアノ演奏）.mp3"
+        },
+        {
+          "id": "se_1779249007612_35",
+          "displayName": "目が点になる",
+          "fileName": "目が点になる.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\目が点になる.mp3"
+        },
+        {
+          "id": "se_1779249007613_269",
+          "displayName": "落ち込む",
+          "fileName": "落ち込む.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\落ち込む.mp3"
+        },
+        {
+          "id": "se_1779249007613_2255",
+          "displayName": "鈴を鳴らす",
+          "fileName": "鈴を鳴らす.mp3",
+          "fullPath": "C:\\Users\\nakac\\AppData\\Roaming\\Adobe\\CEP\\extensions\\SEPonDashi\\assets\\audio\\鈴を鳴らす.mp3"
+        }
+      ]
+    }
+  ]
+}

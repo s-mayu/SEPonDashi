@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEポン出しパネル - 制作の流れと導入手順</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f8f8f8; --surface: #ffffff; --border: #e0e0e0;
+      --accent: #2563eb; --accent-bg: #eff6ff;
+      --warn-bg: #fffbeb; --warn-border: #f59e0b;
+      --tip-bg: #f0fdf4; --tip-border: #22c55e;
+      --update-bg: #faf5ff; --update-border: #a855f7;
+      --text: #1a1a1a; --text-sub: #555;
+      --code-bg: #f1f5f9; --radius: 8px;
+    }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Yu Gothic UI", sans-serif; font-size: 15px; line-height: 1.75; padding: 32px 16px 64px; }
+    .wrap { max-width: 780px; margin: 0 auto; }
+    .doc-header { background: var(--accent); color: #fff; border-radius: var(--radius); padding: 28px 32px 24px; margin-bottom: 36px; }
+    .doc-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .doc-header p { font-size: 14px; opacity: 0.85; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .badge { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 3px 12px; font-size: 12px; font-weight: 600; }
+    section { margin-bottom: 48px; }
+    h2 { font-size: 18px; font-weight: 700; border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 20px; margin-top: 8px; }
+    h3 { font-size: 15px; font-weight: 700; margin: 24px 0 10px; color: var(--accent); }
+    p { margin-bottom: 12px; color: var(--text-sub); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; background: var(--surface); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    th { background: var(--accent-bg); color: var(--accent); font-weight: 700; padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+    td { padding: 9px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafafa; }
+    pre { background: #1e1e2e; color: #cdd6f4; border-radius: var(--radius); padding: 16px 18px; font-size: 13px; line-height: 1.6; overflow-x: auto; margin-bottom: 16px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+    code { background: var(--code-bg); padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+    pre code { background: transparent; padding: 0; font-size: inherit; }
+    .note { border-radius: var(--radius); padding: 12px 16px; font-size: 13.5px; margin: 12px 0 16px; display: flex; gap: 10px; align-items: flex-start; }
+    .note-warn { background: var(--warn-bg); border: 1px solid var(--warn-border); }
+    .note-tip  { background: var(--tip-bg);  border: 1px solid var(--tip-border); }
+    .note-update { background: var(--update-bg); border: 1px solid var(--update-border); }
+    .note-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .note p { margin: 0; color: var(--text); }
+    .steps { list-style: none; counter-reset: step; }
+    .steps li { counter-increment: step; display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+    .steps li::before { content: counter(step); background: var(--accent); color: #fff; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .steps li p { margin: 0; }
+    .os-tabs { display: flex; gap: 0; margin-bottom: 0; }
+    .os-tab { padding: 8px 20px; background: var(--code-bg); border: 1px solid var(--border); border-bottom: none; border-radius: 8px 8px 0 0; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text-sub); transition: background 0.15s, color 0.15s; user-select: none; }
+    .os-tab.active { background: var(--surface); color: var(--accent); border-bottom: 1px solid var(--surface); z-index: 1; }
+    .os-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 0 8px 8px 8px; padding: 20px 24px; display: none; }
+    .os-panel.active { display: block; }
+    .faq-item { margin-bottom: 14px; }
+    .faq-q { font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .faq-a { color: var(--text-sub); margin: 0; padding-left: 12px; border-left: 3px solid var(--border); }
+    footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
+    hr { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+    strong { color: var(--text); }
+    ul { margin: 8px 0 12px 20px; color: var(--text-sub); }
+    ul li { margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="doc-header">
+    <h1>🎵 SEポン出しパネル</h1>
+    <p>制作の流れと導入手順</p>
+    <div class="badges">
+      <span class="badge">Premiere Pro 2025 / 2026</span>
+      <span class="badge">CEP 12</span>
+      <span class="badge">Windows / Mac</span>
+    </div>
+  </div>
+
+  <!-- このプラグインについて -->
+  <section>
+    <h2>このプラグインについて</h2>
+    <div class="card">
+      <p>Adobe Premiere Pro 用の CEP エクステンション（カスタムパネル）です。動画編集中にワンクリックで効果音（SE）をタイムラインへ配置できます。</p>
+      <p style="margin:0;">WAV / MP3 ファイルをドロップするだけで登録でき、カテゴリ分け・トラック選択・視聴プレビューにも対応しています。</p>
+    </div>
+  </section>
+
+  <!-- 制作の流れ -->
+  <section>
+    <h2>制作の流れ</h2>
+    <h3>1. 構成の設計</h3>
+    <table>
+      <thead><tr><th>レイヤー</th><th>使用技術</th><th>役割</th></tr></thead>
+      <tbody>
+        <tr><td>UI</td><td>HTML / CSS / JavaScript</td><td>パネルの見た目・操作</td></tr>
+        <tr><td>Premiere連携</td><td>ExtendScript（JSX）</td><td>タイムラインへの配置操作</td></tr>
+        <tr><td>ファイル管理</td><td>Node.js（fs / path）</td><td>SEファイルのコピー・config保存</td></tr>
+        <tr><td>設定保存</td><td>config.json</td><td>SE一覧・カテゴリの永続化</td></tr>
+      </tbody>
+    </table>
+    <h3>2. ファイル構成</h3>
+    <pre>SEPonDashi/
+├── CSXS/
+│   └── manifest.xml        ← エクステンション定義・Node.js有効化
+├── assets/
+│   └── audio/              ← ドロップしたSEの保存先
+├── config/
+│   └── config.json         ← SE一覧・カテゴリ設定
+├── css/
+│   └── style.css           ← ダークUI スタイル
+├── js/
+│   └── main.js             ← パネルのロジック全般
+├── jsx/
+│   └── hostscript.jsx      ← ExtendScript（Premiere操作）
+├── lib/
+│   └── CSInterface.js      ← Adobe公式ライブラリ
+└── index.html              ← パネルのHTML</pre>
+    <h3>3. 実装のポイント</h3>
+    <div class="card">
+      <strong>SE配置の仕組み</strong>
+      <ol style="margin: 8px 0 0 20px; color: var(--text-sub);">
+        <li>SEボタンを左クリック</li>
+        <li><code>main.js</code> が <code>csInterface.evalScript()</code> で JSX 関数を呼ぶ</li>
+        <li><code>hostscript.jsx</code> がパス・ファイル名でプロマネを検索し、なければインポート</li>
+        <li>アクティブシーケンスの再生ヘッド（CTI）位置に配置</li>
+      </ol>
+    </div>
+    <div class="card">
+      <strong>CEP 12 対応で発生した問題と解決</strong>
+      <ul>
+        <li>Premiere Pro 2025（v25.5.0）は内部的に CEP 12 を使用している</li>
+        <li><code>CSXS.11</code> にのみ <code>PlayerDebugMode=1</code> を設定していたため署名検証エラーが発生</li>
+        <li><code>CSXS.12</code> にも同様の設定を追加して解決</li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>プロジェクト重複防止</strong>
+      <ul>
+        <li>インポート前にパス・ファイル名の両方でプロマネを検索</li>
+        <li>既に同名ファイルがあれば再インポートせずそのまま使用</li>
+        <li>プロマネを使い回す場合でも同名ファイルが2つになることがない</li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>その他の機能</strong>
+      <ul>
+        <li>カテゴリタブ（追加・削除・ダブルクリックで名前変更）</li>
+        <li>SEボタンをカテゴリタブへドラッグ＆ドロップで移動</li>
+        <li>右クリックでパネル内視聴プレビュー（別SEで切り替え・自動停止）</li>
+        <li>グリッド ⇔ リスト表示切り替え</li>
+        <li>同名ファイルの2重登録防止</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 受け取るファイル -->
+  <section>
+    <h2>受け取るファイル一覧</h2>
+    <table>
+      <thead><tr><th>ファイル</th><th>用途</th><th>対象OS</th></tr></thead>
+      <tbody>
+        <tr><td><code>SEPonDashi.zip</code></td><td>プラグイン本体</td><td>Windows / Mac</td></tr>
+        <tr><td><code>CEP_setup.bat</code></td><td>セットアップ用（初回のみ）</td><td>Windows</td></tr>
+        <tr><td><code>CEP_setup.command</code></td><td>セットアップ用（初回のみ）</td><td>Mac</td></tr>
+        <tr><td><code>SEPonDashi_guide.html</code></td><td>この導入手順書</td><td>Windows / Mac</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 導入手順 -->
+  <section>
+    <h2>導入手順（新規インストール）</h2>
+    <div class="os-tabs">
+      <div class="os-tab active" onclick="switchOS('win')">🪟 Windows</div>
+      <div class="os-tab" onclick="switchOS('mac')">🍎 Mac</div>
+    </div>
+    <div class="os-panel active" id="panel-win">
+      <h3>STEP 1：セットアップを実行（初回のみ）</h3>
+      <p><code>CEP_setup.bat</code> を右クリック → <strong>「管理者として実行」</strong></p>
+      <p>「発行元を確認できませんでした」という警告が出たら <strong>「実行(R)」</strong> をクリック。</p>
+      <ul>
+        <li>CEP デバッグモードの有効化（CSXS.11 / CSXS.12）</li>
+        <li><code>extensions</code> フォルダの自動作成・自動展開</li>
+      </ul>
+      <div class="note note-warn"><span class="note-icon">⚠️</span><p>これは初回だけ必要です。2回目以降は不要です。</p></div>
+      <h3>STEP 2：フォルダを配置</h3>
+      <ol class="steps">
+        <li><p><code>SEPonDashi.zip</code> を右クリック → <strong>「すべて展開」</strong></p></li>
+        <li><p>展開された <code>SEPonDashi</code> フォルダをコピー</p></li>
+        <li><p>STEP 1 で開いた <code>extensions</code> フォルダに貼り付け</p></li>
+      </ol>
+      <h3>STEP 3：Premiere Pro で開く</h3>
+      <ol class="steps">
+        <li><p>Premiere Pro を起動</p></li>
+        <li><p>メニュー → <strong>「ウィンドウ」→「エクステンション」→「SEポン出しパネル」</strong></p></li>
+        <li><p>パネルが表示されれば完了</p></li>
+      </ol>
+    </div>
+    <div class="os-panel" id="panel-mac">
+      <h3>STEP 1：セットアップを実行（初回のみ）</h3>
+      <div class="note note-warn">
+        <span class="note-icon">⚠️</span>
+        <p><strong>「適切なアクセス権限がないために実行できません」と表示された場合</strong><br>
+        ターミナルを開き、以下を実行してから再度ダブルクリックしてください。</p>
+      </div>
+      <pre>chmod +x ~/Downloads/CEP_setup.command</pre>
+      <p><code>CEP_setup.command</code> をダブルクリック。「開発元を確認できません」が出たら：<br>
+      <strong>システム設定 → 「プライバシーとセキュリティ」→ 「このまま開く」</strong></p>
+      <div class="note note-warn"><span class="note-icon">⚠️</span><p>これは初回だけ必要です。2回目以降は不要です。</p></div>
+      <h3>STEP 2：フォルダを配置</h3>
+      <p><code>SEPonDashi</code> フォルダを STEP 1 で開いた <code>extensions</code> フォルダに貼り付け。</p>
+      <h3>STEP 3：Premiere Pro で開く</h3>
+      <p>メニュー → <strong>「ウィンドウ」→「エクステンション」→「SEポン出しパネル」</strong></p>
+      <div class="note note-warn"><span class="note-icon">⚠️</span><p>Macへ渡す場合はSEデータが空の状態のZIPを使用してください。WindowsのファイルパスはMacでは動作しません。</p></div>
+    </div>
+  </section>
+
+  <!-- アップデート手順 -->
+  <section>
+    <h2>アップデート手順（既にインストール済みの方）</h2>
+    <div class="note note-update">
+      <span class="note-icon">🔒</span>
+      <p><strong><code>assets/audio/</code> フォルダは絶対に削除しないでください。</strong>登録済みのSEが消えます。</p>
+    </div>
+    <ol class="steps">
+      <li><p>Premiere Pro を完全終了</p></li>
+      <li>
+        <p><code>extensions</code> フォルダを開く</p>
+        <p style="margin-top:6px; font-size:13px; color:var(--text-sub);">
+          Windows: <code>%APPDATA%\Adobe\CEP\extensions</code><br>
+          Mac: <code>~/Library/Application Support/Adobe/CEP/extensions</code>
+        </p>
+      </li>
+      <li><p>既存の <code>SEPonDashi</code> フォルダの中の以下のファイルだけ上書き</p></li>
+    </ol>
+    <table>
+      <thead><tr><th>上書きするファイル</th><th>場所</th></tr></thead>
+      <tbody>
+        <tr><td><code>index.html</code></td><td><code>SEPonDashi/</code> 直下</td></tr>
+        <tr><td><code>main.js</code></td><td><code>SEPonDashi/js/</code></td></tr>
+        <tr><td><code>style.css</code></td><td><code>SEPonDashi/css/</code></td></tr>
+        <tr><td><code>hostscript.jsx</code></td><td><code>SEPonDashi/jsx/</code></td></tr>
+        <tr><td><code>manifest.xml</code></td><td><code>SEPonDashi/CSXS/</code></td></tr>
+      </tbody>
+    </table>
+    <ol class="steps" style="counter-reset: step 4;">
+      <li><p>Premiere Pro を再起動</p></li>
+    </ol>
+  </section>
+
+  <!-- 使い方 -->
+  <section>
+    <h2>SEの使い方</h2>
+    <h3>登録方法</h3>
+    <ol class="steps">
+      <li><p>パネル下部のドロップゾーンに <strong>WAV / MP3 ファイルをドラッグ＆ドロップ</strong></p></li>
+      <li><p>自動でボタンが追加される</p></li>
+      <li><p>カテゴリを分けたい場合は <strong>「＋」ボタン</strong> でカテゴリを追加</p></li>
+    </ol>
+    <h3>タイムラインへの配置</h3>
+    <ol class="steps">
+      <li><p>Premiere Pro のタイムラインパネルをクリック（アクティブ化）</p></li>
+      <li><p>再生ヘッドを置きたい位置に移動</p></li>
+      <li><p>パネル上部で配置先トラック（<strong>A2 / A3 / A4 / A5</strong>）を選択</p></li>
+      <li><p>SEボタンを<strong>左クリック</strong> → タイムラインに配置される</p></li>
+    </ol>
+    <div class="note note-tip"><span class="note-icon">💡</span><p>SEボタンを押す前に、必ずタイムラインパネルをクリックしてアクティブにしてください。</p></div>
+    <h3>視聴プレビュー（聴き比べ）</h3>
+    <div class="card">
+      <ul style="margin:0;">
+        <li>SEボタンを<strong>右クリック</strong> → パネル内で再生（ボタンがオレンジに点滅）</li>
+        <li>再生中に別のSEを右クリック → 自動で切り替え</li>
+        <li>最後まで再生したら自動停止</li>
+      </ul>
+    </div>
+    <h3>カテゴリ間の移動</h3>
+    <ol class="steps">
+      <li><p>移動したい SE ボタンをドラッグ</p></li>
+      <li><p>移動先のカテゴリタブの上でドロップ（タブが青くハイライトされる）</p></li>
+    </ol>
+    <h3>表示切り替え</h3>
+    <p>カテゴリバーの <strong>☰ ボタン</strong> でグリッド表示 ⇔ リスト表示を切り替えられます。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <h2>よくある質問</h2>
+    <div class="card">
+      <div class="faq-item">
+        <p class="faq-q">Q. パネルがメニューに表示されない</p>
+        <p class="faq-a">セットアップ（STEP 1）を確認し、Premiere Pro を完全終了して再起動してください。</p>
+      </div><hr>
+      <div class="faq-item">
+        <p class="faq-q">Q. パネルがメニューに表示されるがクリックしても開かない</p>
+        <p class="faq-a"><code>CEP_setup.bat</code>（Windows）または <code>CEP_setup.command</code>（Mac）を再実行してください。Premiere Pro 2025（v25.x）は CEP 12 を使用しているため、<code>CSXS.12</code> への設定が必要です。</p>
+      </div><hr>
+      <div class="faq-item">
+        <p class="faq-q">Q. SEを押してもエラーになる</p>
+        <p class="faq-a">タイムラインパネルをクリックしてアクティブにしてから再試行してください。</p>
+      </div><hr>
+      <div class="faq-item">
+        <p class="faq-q">Q. bat / command ファイルの警告が出た</p>
+        <p class="faq-a">Windows は「実行(R)」、Mac は「このまま開く」をクリックしてください。自作のセットアップファイルなので安全です。</p>
+      </div><hr>
+      <div class="faq-item">
+        <p class="faq-q">Q. WAV / MP3 以外は使えますか？</p>
+        <p class="faq-a">このバージョンでは WAV と MP3 のみ対応しています。</p>
+      </div><hr>
+      <div class="faq-item">
+        <p class="faq-q">Q. Macに渡したい</p>
+        <p class="faq-a">SEデータが空の状態でZIPにして渡し、<code>CEP_setup.command</code> も一緒に送ってください。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>制作：Claude（Anthropic）との共同開発</footer>
+</div>
+<script>
+  function switchOS(os) {
+    document.querySelectorAll(".os-tab").forEach(function(t) { t.classList.remove("active"); });
+    document.querySelectorAll(".os-panel").forEach(function(p) { p.classList.remove("active"); });
+    document.querySelectorAll(".os-tab")[os === "win" ? 0 : 1].classList.add("active");
+    document.getElementById("panel-" + os).classList.add("active");
+  }
+</script>
+</body>
+</html>

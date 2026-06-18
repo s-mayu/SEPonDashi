@@ -1,0 +1,460 @@
+/* ===== リセット & ベース ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary:     #1a1a1a;
+  --bg-secondary:   #252525;
+  --bg-tertiary:    #2e2e2e;
+  --bg-hover:       #383838;
+  --accent:         #4a9eff;
+  --accent-active:  #2a7edf;
+  --danger:         #e05252;
+  --success:        #4caf76;
+  --warning:        #e0a032;
+  --text-primary:   #e8e8e8;
+  --text-secondary: #a0a0a0;
+  --text-muted:     #666666;
+  --border:         #3a3a3a;
+  --radius:         6px;
+  --radius-lg:      10px;
+}
+
+html, body { width: 100%; height: 100%; overflow: hidden; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+               "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+/* ===== ヘッダー ===== */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.panel-title { font-size: 14px; font-weight: 600; }
+
+/* ===== ステータス ===== */
+.status-idle  { color: var(--text-muted);  font-size: 11px; }
+.status-ok    { color: var(--success);      font-size: 11px; }
+.status-error { color: var(--danger);       font-size: 11px; }
+.status-busy  { color: var(--warning);      font-size: 11px; }
+
+/* ===== トラック選択バー ===== */
+.track-selector-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.track-selector-label { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+.track-btn-group { display: flex; gap: 4px; }
+
+.track-btn {
+  padding: 3px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.track-btn:hover { background: var(--bg-hover); color: var(--text-primary); }
+.track-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ===== カテゴリタブバー ===== */
+.category-bar {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  min-height: 34px;
+  overflow: hidden;
+}
+
+.category-tabs {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.category-tabs::-webkit-scrollbar { display: none; }
+
+/* タブ1枚 */
+.cat-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.12s, border-color 0.12s;
+  flex-shrink: 0;
+}
+.cat-tab:hover { color: var(--text-primary); }
+.cat-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* タブ内の削除ボタン */
+.cat-tab-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.12s, color 0.12s, background 0.12s;
+  padding: 0;
+  line-height: 1;
+}
+.cat-tab:hover .cat-tab-delete { opacity: 1; }
+.cat-tab-delete:hover { color: var(--danger); background: rgba(224,82,82,0.15); }
+
+/* タブ名インライン編集（ダブルクリック） */
+.cat-tab-name {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  min-width: 24px;
+  cursor: pointer;
+}
+.cat-tab-name[contenteditable="true"] {
+  background: rgba(74,158,255,0.12);
+  border-radius: 3px;
+  padding: 1px 4px;
+  cursor: text;
+}
+
+/* カテゴリ追加ボタン */
+.category-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-left: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.12s, background 0.12s;
+}
+.category-add-btn:hover { color: var(--accent); background: rgba(74,158,255,0.08); }
+
+/* ===== SEグリッドセクション ===== */
+.se-grid-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.se-grid-section::-webkit-scrollbar { width: 6px; }
+.se-grid-section::-webkit-scrollbar-track { background: transparent; }
+.se-grid-section::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+.se-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+
+/* ===== SEボタン ===== */
+.se-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, border-color 0.12s, transform 0.08s;
+  user-select: none;
+  min-height: 68px;
+  overflow: hidden;
+}
+.se-btn:hover { background: var(--bg-hover); border-color: var(--accent); }
+.se-btn:active { background: var(--accent-active); transform: scale(0.97); }
+.se-btn.playing { border-color: var(--success); background: #1a3326; }
+
+.se-btn-icon { font-size: 18px; margin-bottom: 4px; line-height: 1; }
+.se-btn-name { font-size: 11px; font-weight: 500; word-break: break-all; line-height: 1.3; }
+
+.se-btn-delete {
+  position: absolute;
+  top: 3px; right: 3px;
+  width: 15px; height: 15px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.12s, color 0.12s, background 0.12s;
+}
+.se-btn:hover .se-btn-delete { opacity: 1; }
+.se-btn-delete:hover { color: var(--danger); background: rgba(224,82,82,0.15); }
+
+/* ===== 空メッセージ ===== */
+.no-se-message {
+  display: none;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 24px;
+  line-height: 1.8;
+}
+.no-se-message.visible { display: block; }
+
+/* ===== ドロップゾーン ===== */
+.drop-section { flex-shrink: 0; padding: 8px 12px; border-top: 1px solid var(--border); }
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 12px;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  min-height: 80px;
+}
+.drop-zone.drag-over { border-color: var(--accent); background: rgba(74,158,255,0.08); }
+.drop-icon { font-size: 22px; color: var(--text-muted); margin-bottom: 5px; line-height: 1; }
+.drop-zone.drag-over .drop-icon { color: var(--accent); }
+.drop-label { font-size: 12px; font-weight: 500; color: var(--text-secondary); }
+.drop-sub { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+/* ===== フッター ===== */
+.panel-footer {
+  flex-shrink: 0;
+  padding: 5px 12px 7px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+.log-area { font-size: 10px; color: var(--text-muted); min-height: 15px; word-break: break-all; line-height: 1.5; }
+.log-area.log-error   { color: var(--danger); }
+.log-area.log-success { color: var(--success); }
+.log-area.log-warning { color: var(--warning); }
+
+/* ===== モーダル ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-overlay.hidden { display: none; }
+
+.modal-box {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 18px 16px;
+  width: 220px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+.modal-title { font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.modal-input {
+  width: 100%;
+  padding: 6px 9px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+  margin-bottom: 12px;
+}
+.modal-input:focus { border-color: var(--accent); }
+.modal-btns { display: flex; gap: 8px; justify-content: flex-end; }
+.modal-btn {
+  padding: 5px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.modal-btn-cancel { background: var(--bg-secondary); color: var(--text-secondary); }
+.modal-btn-cancel:hover { background: var(--bg-hover); }
+.modal-btn-ok { background: var(--accent); border-color: var(--accent); color: #fff; }
+.modal-btn-ok:hover { background: var(--accent-active); }
+/* ===== カテゴリ間ドラッグ&ドロップ ===== */
+.se-btn.dragging {
+  opacity: 0.45;
+  border-color: var(--accent);
+  transform: scale(0.95);
+}
+
+.cat-tab.drop-target {
+  background: rgba(74,158,255,0.18);
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ===== リスト表示モード ===== */
+.se-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.se-btn.se-btn-list {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 7px 10px;
+  min-height: 36px;
+  gap: 8px;
+  text-align: left;
+}
+
+.se-btn.se-btn-list .se-btn-icon {
+  font-size: 11px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.se-btn.se-btn-list .se-btn-name {
+  font-size: 12px;
+  word-break: break-all;
+  flex: 1;
+}
+
+.se-btn.se-btn-list .se-btn-delete {
+  opacity: 0;
+  position: static;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.se-btn.se-btn-list:hover .se-btn-delete { opacity: 1; }
+
+/* ビュー切り替えボタン */
+.view-toggle-btn {
+  font-size: 15px !important;
+  border-right: 1px solid var(--border);
+}
+
+/* ===== 検索バー ===== */
+.search-bar {
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 5px 9px 5px 28px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 12px;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 9px center;
+  transition: border-color 0.12s;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-muted); }
+
+/* ===== SE並び替えドロップインジケータ ===== */
+.se-grid .se-btn.drop-before { box-shadow: -3px 0 0 0 var(--accent); }
+.se-grid .se-btn.drop-after  { box-shadow:  3px 0 0 0 var(--accent); }
+.se-list .se-btn.drop-before { box-shadow: 0 -2px 0 0 var(--accent); }
+.se-list .se-btn.drop-after  { box-shadow: 0  2px 0 0 var(--accent); }
+
+/* ===== すべてビュー カテゴリバッジ ===== */
+.se-btn-cat-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 4px;
+  font-size: 9px;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.35);
+  border-radius: 2px;
+  padding: 1px 4px;
+  line-height: 1.3;
+  max-width: calc(100% - 8px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* リスト表示でのバッジ位置調整 */
+.se-btn-list .se-btn-cat-badge {
+  position: static;
+  margin-left: auto;
+  background: var(--bg-primary);
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ===== 右クリック視聴（プレビュー）===== */
+.se-btn.previewing {
+  border-color: var(--warning);
+  background: #2a2010;
+}
+.se-btn.previewing .se-btn-icon {
+  color: var(--warning);
+  animation: pulse 0.8s ease-in-out infinite alternate;
+}
+@keyframes pulse {
+  from { opacity: 1; }
+  to   { opacity: 0.4; }
+}

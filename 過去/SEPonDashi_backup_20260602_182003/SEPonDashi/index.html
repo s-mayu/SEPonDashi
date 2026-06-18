@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEポン出しパネル</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div id="app">
+
+    <!-- ヘッダー -->
+    <header class="panel-header">
+      <h1 class="panel-title">🎵 SEポン出し</h1>
+      <span id="status-indicator" class="status-idle">待機中</span>
+    </header>
+
+    <!-- トラック選択バー -->
+    <div class="track-selector-bar">
+      <span class="track-selector-label">配置先</span>
+      <div class="track-btn-group">
+        <button class="track-btn" data-track="1">A2</button>
+        <button class="track-btn" data-track="2">A3</button>
+        <button class="track-btn" data-track="3">A4</button>
+        <button class="track-btn" data-track="4">A5</button>
+      </div>
+    </div>
+
+    <!-- カテゴリタブバー -->
+    <div class="category-bar">
+      <div id="category-tabs" class="category-tabs">
+        <!-- タブはJS生成 -->
+      </div>
+      <button id="view-toggle-btn"   class="category-add-btn view-toggle-btn" title="リスト表示">☰</button>
+      <button id="add-category-btn" class="category-add-btn" title="カテゴリ追加">＋</button>
+    </div>
+
+    <!-- SEグリッド -->
+    <section class="se-grid-section">
+      <div id="se-grid" class="se-grid"></div>
+      <p id="no-se-message" class="no-se-message">
+        SEが登録されていません。<br/>下のエリアにファイルをドロップしてください。
+      </p>
+    </section>
+
+    <!-- ドロップゾーン -->
+    <section class="drop-section">
+      <div id="drop-zone" class="drop-zone">
+        <div class="drop-icon">＋</div>
+        <p class="drop-label">WAV / MP3 をドロップして登録</p>
+        <p class="drop-sub">現在のカテゴリへ追加されます</p>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="panel-footer">
+      <div id="log-area" class="log-area">起動完了。</div>
+    </footer>
+
+  </div>
+
+  <!-- カテゴリ追加モーダル -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal-box">
+      <p class="modal-title">カテゴリ名を入力</p>
+      <input id="modal-input" class="modal-input" type="text" maxlength="20" placeholder="例: 効果音"/>
+      <div class="modal-btns">
+        <button id="modal-cancel" class="modal-btn modal-btn-cancel">キャンセル</button>
+        <button id="modal-ok"     class="modal-btn modal-btn-ok">追加</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/CSInterface.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

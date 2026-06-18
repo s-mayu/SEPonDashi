@@ -1,0 +1,104 @@
+================================================================
+  SEPonDashi  |  配布前・受け取り後チェックリスト
+================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  【配布者用】出荷前チェックリスト
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  フォルダ構成の確認
+  □ SEPonDashi_installer/ に以下が揃っているか
+      install.bat
+      install.sh
+      uninstall.bat
+      uninstall.sh
+      README.txt
+      CHECKLIST.txt
+      SEPonDashi/
+        CSXS/manifest.xml
+        assets/audio/     ← 空であること（音声ファイルは含めない）
+        config/config.json ← デフォルト（空の seList）であること
+        css/style.css
+        index.html
+        js/main.js
+        jsx/hostscript.jsx
+        lib/CSInterface.js
+
+  ファイル内容の確認
+  □ config/config.json が空の seList であること（ユーザーデータが混入していないか）
+  □ assets/audio/ に音声ファイルが入っていないこと
+  □ js/main.js が最新バージョンであること
+
+  動作確認（出荷前に実機テスト推奨）
+  □ 【Windows】新規マシンで install.bat を実行 → Premiere 再起動 → パネルが開くこと
+  □ 【Windows】既存インストール済みマシンで install.bat を実行 → config.json が保持されること
+  □ 【macOS】新規マシンで install.sh を実行 → Premiere 再起動 → パネルが開くこと
+  □ 【macOS】既存インストール済みマシンで install.sh を実行 → config.json が保持されること
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  【受け取り側】初回インストール確認リスト
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  インストール完了の確認
+  □ インストーラー実行後に「INSTALLED」と表示されたか
+    （Windows: install.bat / macOS: install.sh）
+  □ Premiere Pro を再起動したか
+  □ 「ウィンドウ → エクステンション」に「SEポン出し」が表示されるか
+  □ パネルが開き、ドロップゾーンが表示されるか
+
+  基本動作の確認
+  □ WAV / MP3 をドロップして SE が登録されるか
+  □ SE ボタンをクリックしてタイムラインに配置されるか
+  □ 配置先トラック（A2〜A5）の切り替えができるか
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  【受け取り側】アップデート確認リスト
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  アップデート完了の確認
+  □ インストーラー実行後に「UPDATED - SE data has been preserved.」と表示されたか
+  □ Premiere Pro を再起動したか
+  □ パネルが開くか
+  □ 以前登録していた SE がそのまま表示されるか
+  □ カテゴリ分類が保持されているか
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  想定トラブルと対処
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  【ウィンドウ → エクステンション に表示されない】
+  原因: PlayerDebugMode が設定されていない / 未反映
+  対処:
+    Windows: install.bat を再実行 → Premiere Pro を完全終了して再起動
+    macOS:   install.sh を再実行 → Premiere Pro を完全終了して再起動
+             ターミナルで確認: defaults read com.adobe.CSXS.12 PlayerDebugMode
+             ※ 「1」と表示されれば設定済み
+
+  【install.bat / install.sh を実行するとすぐ閉じる / エラーになる】
+  原因: エラーが発生してスクリプトが終了している可能性
+  対処:
+    Windows: install.bat を右クリック →「管理者として実行」を試す
+    macOS:   ターミナルで sh install.sh を直接実行してエラー内容を確認する
+
+  【パネルは表示されるが効果音が配置されない】
+  原因: シーケンスが開いていない / 対象トラックが存在しない
+  対処:
+    1. Premiere Pro でシーケンスを開く
+    2. パネル上部のトラック選択（A2〜A5）がシーケンスに存在するか確認
+    3. パネル下部のログ欄のエラーメッセージを確認
+
+  【アップデート後に SE が消えた】
+  原因: 別の場所に展開した ZIP のインストーラーを実行した可能性
+         （config.json が上書きされた）
+  対処:
+    - アンインストール前にバックアップを作成していた場合:
+      SEPonDashi_backup/config.json を
+      Windows: %APPDATA%\SEPonDashi\config.json
+      macOS:   ~/Library/Application Support/SEPonDashi/config.json
+      へコピーして Premiere Pro を再起動
+
+================================================================

@@ -19,7 +19,17 @@ Premiere Pro 拡張機能「SE Pon-dashi」のインストーラーです。
 
 1. このページ右上の緑の **「Code」** ボタン → **「Download ZIP」** をクリック
 2. ZIPを解凍する
-3. `マック` フォルダを開いて手順に従う
+3. `mac` → `SEPonDashi_Mac` フォルダを開く
+4. **ターミナル**を開き、以下を実行する（コピー&ペーストでOK）：
+
+```bash
+bash ~/Downloads/SEPonDashi-main/mac/SEPonDashi_Mac/install.command
+```
+
+5. Premiere Pro を再起動
+6. **ウィンドウ → エクステンション → SEポン出し** で起動確認
+
+> **注意：** `install.command` をダブルクリックしても動かない場合があります。上記のターミナルコマンドを使ってください。
 
 ---
 

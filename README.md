@@ -33,7 +33,7 @@ Premiere Pro 拡張機能「SE Pon-dashi」のインストーラーです。
 
 ## 更新時
 
-同じ手順で `install.bat` を再実行するだけでOKです。  
+同じ手順で `install.bat`（Windows）または `install.command`（Mac）を再実行するだけでOKです。  
 登録済みのSEデータは保持されます。
 
 ---

@@ -1,8 +1,6 @@
-// hostscript.jsx v9
+// hostscript.jsx v8
 
 /* global app */
-
-var DEFAULT_SE_VOLUME_DB = -15;
 
 function placeSEOnTimeline(filePath, audioTrackIndex) {
   try {
@@ -126,58 +124,11 @@ function placeSEOnTimeline(filePath, audioTrackIndex) {
       return "ERR:[" + errMsg + "]";
     }
 
-    // 配置したクリップの音量を DEFAULT_SE_VOLUME_DB に設定（ベストエフォート）
-    try {
-      var targetTrack = audioTracks[audioTrackIndex];
-      var newClip = findClipAtTime(targetTrack, ctiTime);
-      if (newClip) {
-        setClipVolume(newClip, DEFAULT_SE_VOLUME_DB);
-      }
-    } catch(evol) {}
-
     return "OK:A" + (audioTrackIndex + 1);
 
   } catch(e) {
     return "ERR:" + e.toString();
   }
-}
-
-// CTI位置に配置されたクリップを返す
-function findClipAtTime(track, time) {
-  var timeSec = time.seconds;
-  for (var i = 0; i < track.clips.numItems; i++) {
-    var clip = track.clips[i];
-    try {
-      if (Math.abs(clip.start.seconds - timeSec) < 0.001) {
-        return clip;
-      }
-    } catch(e) {}
-  }
-  return null;
-}
-
-// クリップのVolumeコンポーネントのLevelをdB値で設定する
-function setClipVolume(clip, db) {
-  try {
-    for (var i = 0; i < clip.components.numItems; i++) {
-      var comp = clip.components[i];
-      var cname = "";
-      try { cname = comp.displayName; } catch(e) {}
-      // 日本語環境と英語環境の両方に対応
-      if (cname === "Volume" || cname === "ボリューム") {
-        for (var j = 0; j < comp.properties.numItems; j++) {
-          var prop = comp.properties[j];
-          var pname = "";
-          try { pname = prop.displayName; } catch(e) {}
-          if (pname === "Level" || pname === "レベル") {
-            prop.setValue(db, true);
-            return true;
-          }
-        }
-      }
-    }
-  } catch(e) {}
-  return false;
 }
 
 function findProjectItemByName(parentItem, targetName) {
